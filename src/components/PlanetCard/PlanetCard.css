@@ -1,0 +1,34 @@
+/* src/components/PlanetCard/PlanetCard.css */
+.planet-card {
+  flex: 1 1 calc(33.333% - 25px); /* Three columns on desktop */
+  margin: 0;
+  padding: 24px;
+  background: var(--social-bg); /* Use instructor's semi-transparent bg */
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.planet-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-5px);
+}
+
+.planet-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.planet-card h3 {
+  margin: 0 0 8px;
+  color: var(--text-h);
+  font-family: var(--heading);
+}
+
+.planet-card code {
+  font-size: 14px;
+  /* Inherits the instructor's mono font and background */
+}

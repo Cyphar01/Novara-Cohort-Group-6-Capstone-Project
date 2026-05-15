@@ -1,0 +1,49 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  background: var(--bg); /* Theme aware */
+  border-bottom: 1px solid var(--border); /* Theme aware */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-text {
+  font-family: var(--heading);
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-h);
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--accent); /* Uses that purple/gold highlight */
+}
+
+/* Responsive adjustment from the instructor's logic */
+@media (max-width: 1024px) {
+  .main-header {
+    padding: 16px 20px;
+  }
+  
+  .nav-menu {
+    display: none; /* Usually, you'd add a hamburger menu here for mobile */
+  }
+}

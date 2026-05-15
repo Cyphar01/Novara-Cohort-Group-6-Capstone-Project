@@ -1,0 +1,29 @@
+.planet-section {
+  padding: 80px 5%;
+  border-top: 1px solid var(--border); /* Styling from boilerplate */
+}
+
+.planets-grid {
+  display: flex;
+  gap: 25px;
+  /* Desktop layout */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.planets-grid > figure {
+  flex: 1 1 calc(33.333% - 25px);
+  min-width: 250px;
+}
+
+/* Mobile/Tablet logic from boilerplate */
+@media (max-width: 1024px) {
+  .planets-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .planets-grid > figure {
+    width: 100%;
+  }
+}

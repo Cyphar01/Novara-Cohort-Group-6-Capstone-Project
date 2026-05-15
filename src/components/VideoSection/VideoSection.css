@@ -1,0 +1,35 @@
+.video-wrapper {
+  position: relative;
+  height: 80vh; /* Takes up most of the screen as per Figma */
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg); /* Uses theme background while video loads */
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for text contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.video-content {
+  text-align: center;
+  color: #FFFFFF; /* High contrast for the hero section */
+}
