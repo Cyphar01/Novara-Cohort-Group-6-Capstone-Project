@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className="main-footer">
-      <div className="ticks"></div> {/* Reusing the instructor's line style */}
+      <div className="ticks"></div> 
       <div className="footer-content">
         <div className="footer-brand">
           <h3>Timeless Spaces</h3>
