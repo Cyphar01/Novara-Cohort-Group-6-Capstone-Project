@@ -1,0 +1,25 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--bg-dark);
+}
+
+.hero-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  /* Responsive padding logic from boilerplate */
+  padding: 32px 20px 24px;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    gap: 18px;
+  }
+}
