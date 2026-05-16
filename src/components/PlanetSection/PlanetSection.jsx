@@ -10,7 +10,7 @@ const PlanetSection = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    //calling the API to get the planet data
+    // Calling the API to get the planet data
     fetch(PLANET_API_ENDPOINT)
       .then((response) => {
         if (!response.ok) {
@@ -19,8 +19,7 @@ const PlanetSection = () => {
         return response.json();
       })
       .then((data) => {
-        console.log("First Planet Image Path:", data[0]?.image); 
-        
+        console.log("First Planet Image Path:", data[0]?.image);
         setPlanets(data);
         setLoading(false);
       })
@@ -29,8 +28,9 @@ const PlanetSection = () => {
         setError("Failed to load planetary data.");
         setLoading(false);
       });
-    
+      
   }, []);
+
   if (loading) return <div className="loader">Loading the Cosmos...</div>;
   if (error) return <div className="error-msg">{error}</div>;
 
@@ -49,6 +49,6 @@ const PlanetSection = () => {
       </div>
     </section>
   );
-};
+}; // <--- This was the missing curly brace!
 
 export default PlanetSection;
