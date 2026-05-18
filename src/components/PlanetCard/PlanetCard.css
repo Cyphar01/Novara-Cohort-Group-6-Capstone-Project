@@ -32,3 +32,49 @@
   font-size: 14px;
   /* Inherits the instructor's mono font and background */
 }
+
+/* src/components/PlanetCard/PlanetCard.css */
+
+.planet-figure {
+  background: rgba(255, 255, 255, 0.05); /* Slight glass effect */
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0; /* Prevents unwanted browser margins */
+}
+
+.planet-image {
+  width: 100%;        /* Fits the width of the card */
+  max-width: 200px;   /* Prevents them from getting too huge */
+  height: 200px;      /* Forces a square shape */
+  object-fit: cover;  /* Crops the image perfectly without stretching */
+  border-radius: 50%; /* Makes them look like round planets! */
+  margin-bottom: 15px;
+  box-shadow: 0 0 20px rgba(0, 162, 255, 0.3); /* Soft glow */
+}
+
+.planet-figure h3 {
+  color: #fff;
+  margin: 10px 0 5px;
+  font-size: 1.5rem;
+}
+
+.planet-figure p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Add a hover effect for that "Premium" feel */
+.planet-figure:hover {
+  transform: translateY(-10px);
+  border-color: #00a2ff;
+}
+
+.planets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}

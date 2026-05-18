@@ -1,46 +1,84 @@
+/* src/components/ContactForm/ContactForm.css */
+
 .contact-section {
-  padding: 60px 20px;
-  max-width: 600px;
-  margin: 0 auto;
+    background-color: #000c1d; 
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: left;
+.form-container {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 50px 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 162, 255, 0.2); 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    /* Increase this to 1000px or 1200px to match your old project's feel */
+    max-width: 1000px; 
+    box-sizing: border-box;
+}
+
+.form-container h2 {
+    color: #00a2ff;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* This is the magic part from your old project */
+.form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* Keeps it mobile-friendly */
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    flex: 1;
+    min-width: 300px; /* Forces stack on mobile, side-by-side on desktop */
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group label {
-  color: var(--text-h);
-  font-family: var(--heading);
-  font-weight: 500;
+    color: #00a2ff; /* Using neon blue for labels like your screenshot */
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-/* Using instructor's input styling logic */
-input, textarea {
-  padding: 12px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--sans);
-  font-size: 16px;
+.form-group input, 
+.form-group textarea {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 162, 255, 0.3);
+    padding: 15px;
+    color: #fff;
+    border-radius: 6px;
+    font-family: inherit;
 }
 
-input:focus, textarea:focus {
-  outline: 2px solid var(--accent);
-  border-color: transparent;
+/* Full width for the message area */
+.message-group {
+    margin-bottom: 30px;
 }
 
-.success-msg {
-  margin-top: 20px;
-  color: var(--accent);
-  font-weight: bold;
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #2b1d52 0%, #4a309b 100%); /* Purple gradient from your screenshot */
+    color: #e0b0ff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 0 15px rgba(176, 38, 255, 0.6);
+    transform: translateY(-2px);
 }

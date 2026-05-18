@@ -2,13 +2,17 @@
 import React from 'react';
 import './PlanetCard.css';
 
-const PlanetCard = ({ name, distance, image }) => {
+const PlanetCard = ({ name, image, distance }) => {
   return (
-    <figure className="planet-card">
-      <img src={image} alt={name} className="planet-image" />
+    <figure className="planet-figure">
+      <img 
+        src={image} 
+        alt={`Visual representation of ${name || 'planet'}`} 
+        className="planet-image"
+      />
       <figcaption>
         <h3>{name}</h3>
-        <p>Distance: {distance}</p>
+        <p>Distance: {distance} million km</p>
       </figcaption>
     </figure>
   );

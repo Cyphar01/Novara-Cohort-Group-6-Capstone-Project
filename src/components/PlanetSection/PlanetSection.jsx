@@ -1,6 +1,5 @@
 // src/components/PlanetSection/PlanetSection.jsx
 import React, { useState, useEffect } from 'react';
-import { PLANET_API_ENDPOINT } from '../../services/api';
 import PlanetCard from '../PlanetCard/PlanetCard';
 import './PlanetSection.css';
 
@@ -10,17 +9,15 @@ const PlanetSection = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Calling the API to get the planet data
-    fetch(PLANET_API_ENDPOINT)
+    // This points to the file in public/images/planets.json
+    fetch('/images/planets.json')
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
+        if (!response.ok) throw new Error("Could not find the planet data.");
         return response.json();
       })
       .then((data) => {
-        console.log("First Planet Image Path:", data[0]?.image);
-        setPlanets(data);
+        // Accessing the 'planets' array from your JSON
+        setPlanets(data.planets); 
         setLoading(false);
       })
       .catch((err) => {
@@ -28,7 +25,6 @@ const PlanetSection = () => {
         setError("Failed to load planetary data.");
         setLoading(false);
       });
-      
   }, []);
 
   if (loading) return <div className="loader">Loading the Cosmos...</div>;
@@ -42,13 +38,15 @@ const PlanetSection = () => {
           <PlanetCard 
             key={index} 
             name={planet.name} 
-            distance={planet.distance} 
+            // Show the distance in million km (e.g., 57.9)
+            distance={planet.distance_from_sun_km / 1000000} 
+            // Passes the NASA link from your JSON directly to the card
             image={planet.image} 
           />
         ))}
       </div>
     </section>
   );
-}; // <--- This was the missing curly brace!
+}; 
 
 export default PlanetSection;

@@ -1,0 +1,44 @@
+{
+  "planets": [
+    {
+      "name": "Mercury",
+      "distance_from_sun_km": 57900000,
+      "image": "https://images-assets.nasa.gov/image/PIA15162/PIA15162~thumb.jpg"
+    },
+    {
+      "name": "Venus",
+      "distance_from_sun_km": 108200000,
+      "image": "https://images-assets.nasa.gov/image/PIA00271/PIA00271~thumb.jpg"
+    },
+    {
+  "name": "Earth",
+  "distance_from_sun_km": 149600000,
+  "image": "https://images-assets.nasa.gov/image/PIA00122/PIA00122~thumb.jpg"
+    },
+    {
+      "name": "Mars",
+      "distance_from_sun_km": 227900000,
+      "image": "https://images-assets.nasa.gov/image/PIA02653/PIA02653~thumb.jpg"
+    },
+    {
+      "name": "Jupiter",
+      "distance_from_sun_km": 778600000,
+      "image": "https://images-assets.nasa.gov/image/PIA04866/PIA04866~thumb.jpg"
+    },
+    {
+      "name": "Saturn",
+      "distance_from_sun_km": 1433500000,
+      "image": "https://images-assets.nasa.gov/image/PIA05380/PIA05380~thumb.jpg"
+    },
+    {
+      "name": "Uranus",
+      "distance_from_sun_km": 2872500000,
+      "image": "https://images-assets.nasa.gov/image/PIA18182/PIA18182~thumb.jpg"
+    },
+    {
+      "name": "Neptune",
+      "distance_from_sun_km": 4495100000,
+      "image": "https://images-assets.nasa.gov/image/PIA01492/PIA01492~thumb.jpg"
+    }
+  ]
+}

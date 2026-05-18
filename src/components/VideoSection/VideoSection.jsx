@@ -19,6 +19,18 @@ const VideoSection = () => {
         <div className="video-content">
           <h1>Timeless Spaces</h1>
           <p>Precision Engineering. Cosmic Perspective.</p>
+          <div className="video-content">
+  <h1>Explore Our Solar System Through Data</h1>
+  <p>Precision Engineering. Cosmic Perspective.</p>
+  
+  {/* Requirement #1: The Scroll Button */}
+  <button 
+  className="explore-btn" 
+  onClick={() => document.getElementById('planets').scrollIntoView({ behavior: 'smooth' })}
+>
+  Explore the Data
+</button>
+</div>
         </div>
       </div>
     </div>
