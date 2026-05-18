@@ -1,5 +1,5 @@
 // src/components/PlanetSection/PlanetSection.jsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { PLANET_API_ENDPOINT } from '../../services/api';
 import PlanetCard from '../PlanetCard/PlanetCard';
 import './PlanetSection.css';

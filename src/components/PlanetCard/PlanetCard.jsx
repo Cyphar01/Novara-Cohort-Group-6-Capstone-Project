@@ -1,5 +1,4 @@
 // src/components/PlanetCard/PlanetCard.jsx
-import React from 'react';
 import './PlanetCard.css';
 
 const PlanetCard = ({ name, distance, image }) => {
